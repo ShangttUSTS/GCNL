@@ -1,0 +1,58 @@
+name: cc
+model_path: models
+mlb: data/cc_go.mlb
+results: results
+
+network:
+  pid_list: data/ppi_pid_list.txt
+  weight_mat: data/ppi_mat.npz
+  blastdb: data/ppi_blastdb
+  dgl: data/ppi_dgl_top_100
+  feature: data/ppi_interpro.npz
+
+train:
+  name: train
+  pid_list_file: data/cc_train_pid_list.txt
+  fasta_file: data/cc_train.fasta
+  pid_go_file: data/cc_train_go.txt
+
+valid:
+  name: valid
+  pid_list_file: data/cc_valid_pid_list.txt
+  fasta_file: data/cc_valid.fasta
+  pid_go_file: data/cc_valid_go.txt
+
+test:
+  name: test
+  pid_list_file: data/cc_test_pid_list.txt
+  fasta_file: data/cc_test.fasta
+
+test_evaluation_A:
+  name: test_evaluation_A
+  pid_list_file: data_evaluation/result_A/output_pid_list.txt
+  fasta_file: data_evaluation/result_A/protein.fasta
+  results_evaluation_A: data_evaluation_results
+
+test_evaluation_Human:
+  name: test_evaluation_Human
+  pid_list_file: data_evaluation/result_Human/output_pid_list.txt
+  fasta_file: data_evaluation/result_Human/protein.fasta
+  results_evaluation_Human: data_evaluation_results
+
+test_evaluation_MOUSE:
+  name: test_evaluation_MOUSE
+  pid_list_file: data_evaluation/result_MOUSE/output_pid_list.txt
+  fasta_file: data_evaluation/result_MOUSE/protein.fasta
+  results_evaluation_MOUSE: data_evaluation_results
+
+test_evaluation_Rat:
+  name: test_evaluation_Rat
+  pid_list_file: data_evaluation/result_Rat/output_pid_list.txt
+  fasta_file: data_evaluation/result_Rat/protein.fasta
+  results_evaluation_Rat: data_evaluation_results
+
+test_evaluation_S:
+  name: test_evaluation_S
+  pid_list_file: data_evaluation/result_S/output_pid_list.txt
+  fasta_file: data_evaluation/result_S/protein.fasta
+  results_evaluation_S: data_evaluation_results
